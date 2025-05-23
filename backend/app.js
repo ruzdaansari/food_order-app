@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
-
 import bodyParser from 'body-parser';
 import express from 'express';
+import { onRequest } from 'firebase-functions/v2/https'; // Modern import style
 
 const app = express();
 
@@ -24,9 +24,7 @@ app.post('/orders', async (req, res) => {
   const orderData = req.body.order;
 
   if (orderData === null || orderData.items === null || orderData.items.length === 0) {
-    return res
-      .status(400)
-      .json({ message: 'Missing data.' });
+    return res.status(400).json({ message: 'Missing data.' });
   }
 
   if (
@@ -66,4 +64,5 @@ app.use((req, res) => {
   res.status(404).json({ message: 'Not found' });
 });
 
-app.listen(3000);
+// Do not listen on a port; export as a Firebase Function
+export const api = onRequest(app);

@@ -29,7 +29,7 @@ export default function Checkout({}) {
     error,
     sendRequest,
     clearRequest
-  } = useHttp(`http://localhost:3000/orders`, requestCOnfig);
+  } = useHttp(`https://food-order-app-v0ra.onrender.com/orders`, requestCOnfig);
 
   async function submitAction(prevFormState, formData) {
     const customerData = {
@@ -40,7 +40,7 @@ export default function Checkout({}) {
       city: formData.get("city"),
     };
 
-    // fetch(`http://localhost:3000/orders`,{
+    // fetch(`https://food-order-app-v0ra.onrender.com/orders`,{
     //   method:"POST",
     //   headers:{
     //     "Content-Type":"application/json"

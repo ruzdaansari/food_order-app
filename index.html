@@ -5,12 +5,35 @@
     <link rel="icon" type="image/svg+xml" href="/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React FoodOrder</title>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA0ezjIFXoA5vXVSldEvbyu93nn9oTZHuI",
+    authDomain: "food-order-app-ea77f.firebaseapp.com",
+    projectId: "food-order-app-ea77f",
+    storageBucket: "food-order-app-ea77f.firebasestorage.app",
+    messagingSenderId: "549478438702",
+    appId: "1:549478438702:web:fc5bdbfe8de2c85d674cbf",
+    measurementId: "G-SWFKGMGG0F"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
   </head>
   <body>
     <div id="modal"></div>
     <div id="root"></div>
 
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

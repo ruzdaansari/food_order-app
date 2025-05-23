@@ -10,7 +10,7 @@ export default function Meals() {
 
   // useEffect(() => {
   //   const fetchMeals = async () => {
-  //     const response = await fetch(`http://localhost:3000/meals`);
+  //     const response = await fetch(`https://food-order-app-v0ra.onrender.com/meals`);
   //     const meal =await response.json();
   //     setLoadedMeals(meal);
   //   };
@@ -22,7 +22,7 @@ export default function Meals() {
     data: loadedMeals,
     isLoading,
     error,
-  } = useHttp(`http://localhost:3000/meals`, requestConfig, []);
+  } = useHttp(`https://food-order-app-v0ra.onrender.com/meals`, requestConfig, []);
 
 
   if(isLoading){

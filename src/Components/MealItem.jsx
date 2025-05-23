@@ -10,7 +10,7 @@ export default function MealItem({ mealData }) {
     <li className="meal-item">
       <article>
         <img
-          src={`http://localhost:3000/${mealData.image}`}
+          src={`https://food-order-app-v0ra.onrender.com/${mealData.image}`}
           alt={mealData.name}
         ></img>
         <div>
